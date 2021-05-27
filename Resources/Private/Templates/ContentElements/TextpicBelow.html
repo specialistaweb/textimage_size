@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+
+<f:variable name="columns">12</f:variable>
+
+<f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
+
+    <f:variable name="textimageinputsize">{data.layout -6760}</f:variable>
+    <f:variable name="textimage-imagesize">col-md-{textimageinputsize} m-auto</f:variable>
+
+</f:if>
+
+    <div class="textpic textpic-below">
+        <div class="textpic-item textpic-gallery {textimage-imagesize}">
+            <f:render partial="Media/Gallery" arguments="{_all}" />
+        </div>
+        <div class="textpic-item textpic-text">
+            <f:render partial="Header/All" arguments="{_all}" />
+            <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+    </div>
+
+</f:section>
+</html>

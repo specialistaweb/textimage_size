@@ -1,0 +1,45 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "allows you to change the output  layout for text\/image (also said: textpict) content under boostrap 4 so you can get different size for text or image cols and not only the 50%-50% split",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "textimage_size",
+        "name": "Text\/Image size",
+        "originalExtensionKey": "textimage_size",
+        "originalVendorName": "Specialistaweb",
+        "persons": [
+            {
+                "company": "None",
+                "email": "at@specialistaweb.it",
+                "name": "Alessandro Tuveri",
+                "role": "Developer"
+            },
+            {
+                "company": "Specialistaweb",
+                "email": "gt@pecialistaweb.it",
+                "name": "Giulia Tuveri",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Specialistaweb"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-12-22 09:37",
+        "extension_builder_version": "9.10.2",
+        "be_user": "Service (1)"
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "name": "specialistaweb/textimage-size",
+    "type": "typo3-cms-extension",
+    "description": "useful to change the output  layout for text/image (also said: textpict) content under boostrap 4 so you can get different size for text or image cols and not only the 50%-50% split",
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "content",
+        "text",
+	"textpic",
+	"media",
+	"size",
+	"picture",
+	"image"
+    ],
+    "homepage": "https://typo3-rollovereffects.uniud.it/development/textimage-size",
+    "authors": [
+        {
+            "name": "Alessandro Tuveri",
+            "role": "Developer"
+        },
+        {
+            "name": "Giulia Tuveri",
+            "role": "Developer"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5.17|^10.4.0",
+      	"bootstrap_package": "^9.0.0|^10|^11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Specialistaweb\\TextimageSize\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Specialistaweb\\TextimageSize\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "specialistaweb/textimage-size": "self.version",
+        "typo3-ter/textimage-size": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "textimage_size"
+        }
+    }
+}
