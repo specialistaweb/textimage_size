@@ -29,7 +29,7 @@
     ],
     "require": {
         "typo3/cms-core": "^9.5.17|^10.4.0",
-      	"bootstrap_package": "^9.0.0|^10|^11"
+      	"bk2k/bootstrap-package": "^9.0.0|^10|^11"
     },
     "autoload": {
         "psr-4": {
