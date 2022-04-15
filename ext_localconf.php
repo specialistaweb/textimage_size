@@ -1,7 +1,10 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-    die('Access denied.');
-}
+
+// all use statements must come first
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+// Prevent Script from being called directly
+defined('TYPO3') or die();
 
 
 // TCEFORM
