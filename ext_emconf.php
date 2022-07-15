@@ -14,8 +14,8 @@ $EM_CONF[$_EXTKEY] = array (
   'title' => 'Text Media/Image size',
   'description' => 'Useful change the output size for standard bootstrap package output (column split 50% image - 50% text). For content types text/image (textpict), text/media and image',
   'category' => 'plugin',
-  'author' => 'Alessandro Tuveri, Giulia Tuveri',
-  'author_email' => 'at@specialistaweb.it, gt@pecialistaweb.it',
+  'author' => 'Giulia Tuveri',
+  'author_email' => 'gt@pecialistaweb.it',
   'state' => 'beta',
   'uploadfolder' => false,
   'clearCacheOnLoad' => 0,
@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = array (
     'depends' => 
     array (
       'typo3' => '11.0.0-11.5.99',
-      'bootstrap_package' => '9.0.0-11.0.3',
+      'bootstrap_package' => '9.0.0-12.0.99',
     ),
     'conflicts' => 
     array (
