@@ -4,6 +4,6 @@ plugin.bootstrap_package_contentelements {
     }
 }
 
-plugin.tx_textimage.settings.ScssPath =  EXT:textimage_size/Resources/Public/Scss/Theme/
+plugin.tx_textimage_size.settings.ScssPath =  EXT:textimage_size/Resources/Public/Scss/bootstrap5/
 
 
