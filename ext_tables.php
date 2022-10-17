@@ -8,5 +8,5 @@ defined('TYPO3_MODE') || die('Access denied.');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('textimage_size', 'constants', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:textimage_size/Configuration/TypoScript/constants.typoscript>"');
 
 // setup
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('textimage_size', 'setup', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:textimage_size/Configuration/TypoScript/setup.ts>"');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('textimage_size', 'setup', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:textimage_size/Configuration/TypoScript/setup.typoscript>"');
 

@@ -1,0 +1,4 @@
+// PAGE inclusion: Css bundle, Scss and JS
+page.includeCSS {
+      textimage = {$plugin.tx_textimage.settings.ScssPath}textimage.scss
+}

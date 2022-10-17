@@ -3,3 +3,7 @@ plugin.bootstrap_package_contentelements {
         templateRootPath = EXT:textimage_size/Resources/Private/Templates/ContentElements/
     }
 }
+
+plugin.tx_textimage.settings.ScssPath =  EXT:textimage_size/Resources/Public/Scss/Theme/
+
+
