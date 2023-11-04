@@ -1,4 +1,9 @@
+
 @media (min-width: 768px) {
+
+.textmedia-right .textmedia-item, .textmedia-right .textpic-item, .textmedia-left .textmedia-item, .textmedia-left .textpic-item, .textpic-right .textmedia-item, .textpic-right .textpic-item, .textpic-left .textmedia-item, .textpic-left .textpic-item  {
+    width: 100%;
+}
 
   .col-md {
     flex-basis: 0;
@@ -103,7 +108,7 @@
   }
 
   .textpic-item.textpic-text.col-md-9,
-  .textmedia-item.textmedia-text.col-md-9 {
+  .textmedia-item.textmedia-text.teximage-col-md-9 {
    width: calc(75% - 40px);
   }
 

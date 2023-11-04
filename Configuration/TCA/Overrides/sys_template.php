@@ -1,7 +1,9 @@
 <?php
-if (!defined('TYPO3_MODE')) {
+/*
+if (!defined('TYPO3')) {
     die('Access denied.');
 }
+*/
 
 // add static typoscript includes
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('textimage_size', 'Configuration/TypoScript/Bootstrap_Package/bootstrap4/', 'Text/Image size');
