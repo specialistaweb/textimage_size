@@ -1,5 +1,5 @@
 {
-    "name": "specialistaweb/textimage_size",
+    "name": "specialistaweb/textimage-size",
     "type": "typo3-cms-extension",
     "description": "useful to change the output  layout for text/image (also said: textpict) content under boostrap 4 so you can get different size for text or image cols and not only the 50%-50% split",
     "keywords": [
