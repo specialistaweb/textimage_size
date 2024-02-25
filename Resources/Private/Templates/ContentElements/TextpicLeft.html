@@ -2,9 +2,10 @@
 <f:layout name="Default" />
 <f:section name="Header" />
 <f:section name="Main">
-
+<f:debug>{data.layout}</f:debug>
 
 <f:variable name="columns">12</f:variable>
+
 
 <f:if condition="{data.layout} > 6660 && {data.layout} < 6672">
 
@@ -22,8 +23,20 @@
 
 </f:if>
 
+
+
+<f:if condition="{data.layout} == 0">
+  <f:/then>
+         <f:variable name="textimage-style"></f:variable>
+  </f:/then>
+  <f:else>
+        <f:variable name="textimage-style">textimage-size </f:variable>
+  </f:else>
+</f:if>
+
+
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
-    <div class="textpic textpic-left">
+    <div class="{textimage-style} textpic textpic-left">
         <div class="textpic-item textpic-gallery {textimage-imagesize}">
             <f:render partial="Media/Gallery" arguments="{_all}" />
         </div>
@@ -35,4 +48,3 @@
 
 </f:section>
 </html>
-

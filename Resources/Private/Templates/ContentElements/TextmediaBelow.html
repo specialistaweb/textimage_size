@@ -12,8 +12,17 @@
 
 </f:if>
 
+<f:if condition="{data.layout} == 0">
+  <f:/then>
+         <f:variable name="textimage-style"></f:variable>
+  </f:/then>
+  <f:else>
+        <f:variable name="textimage-style">textimage-size </f:variable>
+  </f:else>
+</f:if>
 
-    <div class="textmedia textmedia-below">
+
+    <div class="{textimage-style} textmedia textmedia-below">
         <div class="textmedia-item textmedia-gallery {textimage-imagesize}">
             <f:render partial="Media/Gallery" arguments="{_all}" />
         </div>
