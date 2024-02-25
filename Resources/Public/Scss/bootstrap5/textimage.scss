@@ -1,8 +1,12 @@
-
 @media (min-width: 768px) {
 
 .textimage-size .textpic-item {
     max-width: 100%;
+}
+
+.textimage-size.textmedia.textmedia-above, .textimage-size.textmedia.textmedia-below {
+    display: flex;
+    flex-direction: column;
 }
 
 .textimage-size.textpic-left .textpic-item {
