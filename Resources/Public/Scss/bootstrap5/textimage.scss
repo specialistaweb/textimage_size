@@ -1,24 +1,13 @@
 
 @media (min-width: 768px) {
 
-/*
-.textmedia-right .textmedia-item, .textmedia-right .textpic-item, .textmedia-left .textmedia-item, .textmedia-left .textpic-item, .textpic-right .textmedia-item, .textpic-right .textpic-item, .textpi>
-    width: 100%;
-}
-*/
-
 .textimage-size .textpic-item {
     max-width: 100%;
 }
 
-/*
-.textmedia-right .textmedia-item, .textmedia-right .textpic-item, .textmedia-left .textmedia-item, .textmedia-left .textpic-item, .textpic-right .textmedia-item, .textpic-right .textpic-item, .textpi>
-*/
-
-
-
 .textimage-size.textpic-left .textpic-item {
         width: unset !important;
+	gap: 24px;
 }
 
 .textimage-size.textpic, .textimage-size.textmedia {
