@@ -1,8 +1,14 @@
+.textimage-size.textpic-item.textpic-gallery.col-md-4.m-auto {
+    width: 33%;
+}
+
+
 @media (min-width: 768px) {
 
+
 .textimage-size .textpic-item {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
 }
 
 .textimage-size.textmedia.textmedia-above, .textimage-size.textmedia.textmedia-below {
@@ -12,11 +18,11 @@
 
 .textimage-size.textpic-left .textpic-item {
         width: unset !important;
-	gap: 24px;
 }
 
 .textimage-size.textpic, .textimage-size.textmedia {
         flex-wrap: nowrap;
+	gap: 24px;
 }
 
 
@@ -83,64 +89,67 @@
 
 //textpic & textmedia  left/right/above/below etc.
 
-  .textimage-size .textpic-item.textpic-text.col-md-1,
-  .textimage-size .textmedia-item.textmedia-text.col-md-1 {
+  .textimage-size.col-md-1,
+  .textimage-size .col-md-1 {
    width: calc(8.33333333% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-2,
-  .textimage-size .textmedia-item.textmedia-text.col-md-2 {
+  .textimage-size.col-md-2,
+  .textimage-size .col-md-2 {
    width: calc(16.66666667% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-3,
-  .textimage-size .textmedia-item.textmedia-text.col-md-3 {
+  .textimage-size.col-md-3,
+  .textimage-size .col-md-3 {
    width: calc(25% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-4,
-  .textimage-size .textmedia-item.textmedia-text.col-md-4 {
+  .textimage-size.col-md-4,
+  .textimage-size .col-md-4 {
    width: calc(33.33333333% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-5,
-  .textimage-size .textmedia-item.textmedia-text.col-md-5 {
+  .textimage-size.col-md-5,
+  .textimage-size .col-md-5 {
    width: calc(41.66666667% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-6,
-  .textimage-size .textmedia-item.textmedia-text.col-md-6 {
+  .textimage-size.col-md-6,
+  .textimage-size .col-md-6 {
    width: calc(50% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-7,
-  .textimage-size .textmedia-item.textmedia-text.col-md-7 {
+  .textimage-size.col-md-7,
+  .textimage-size .col-md-7 {
    width: calc(58.33333333% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-8,
-  .textimage-size .textmedia-item.textmedia-text.col-md-8 {
+  .textimage-size.col-md-8,
+  .textimage-size .col-md-8 {
    width: calc(66.66666667% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-9,
-  .textimage-size .textmedia-item.textmedia-text.teximage-col-md-9 {
+  .textimage-size.col-md-9,
+  .textimage-size .col-md-9 {
    width: calc(75% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-10,
-  .textimage-size .textmedia-item.textmedia-text.col-md-10 {
+  .textimage-size.col-md-10,
+  .textimage-size .col-md-10 {
    width: calc(83.33333333% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-11,
-  .textimage-size .textmedia-item.textmedia-text.col-md-11 {
+  .textimage-size.col-md-11,
+  .textimage-size .col-md-11 {
    width: calc(91.66666667% - 24px);
   }
 
-  .textimage-size .textpic-item.textpic-text.col-md-12,
-  .textimage-size .textmedia-item.textmedia-text.col-md-12 {
+  .textimage-size.col-md-12,
+  .textimage-size .col-md-12 {
    width: calc(100% - 24px);
   }
 }
 
+/*
+.textimage-size .textpic-item.textpic-text.col-md-6
+*/
