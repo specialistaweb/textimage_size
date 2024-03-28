@@ -21,6 +21,44 @@
   </f:else>
 </f:if>
 
+<f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
+    <f:switch expression="{data.layout}">
+        <f:case value="6761">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.8}</f:variable>
+        </f:case>
+        <f:case value="6762">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.16}</f:variable>
+        </f:case>
+        <f:case value="6763">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.25}</f:variable>
+        </f:case>
+        <f:case value="6764">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.33}</f:variable>
+        </f:case>
+        <f:case value="6765">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.41}</f:variable>
+        </f:case>
+        <f:case value="6766">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.50}</f:variable>
+        </f:case>
+        <f:case value="6767">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.58}</f:variable>
+        </f:case>
+        <f:case value="6768">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.66}</f:variable>
+        </f:case>
+        <f:case value="6769">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.75}</f:variable>
+        </f:case>
+        <f:case value="6770">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.83}</f:variable>
+        </f:case>
+        <f:case value="6771">
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.91}</f:variable>
+        </f:case>
+    </f:switch>
+</f:if>
+
 
     <div class="{textimage-style} textmedia textmedia-above">
         <div class="textmedia-item textmedia-gallery {textimage-imagesize}">
