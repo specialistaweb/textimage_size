@@ -5,8 +5,46 @@ plugin.bootstrap_package_contentelements {
     }
 }
 
-plugin.tx_textimage_size.settings.ScssPath =  EXT:textimage_size/Resources/Public/Scss/bootstrap5/
 
+# customsubcategory=paths=Scss Path
+# customsubcategory=variants=Variants (responsive) widths, pixels
+# customsubcategory=gutter=Variants (responsive) Gutter widths, pixels
 
+plugin.tx_textimage_size {
+  settings {
 
+    # cat=plugin.tx_textimage_size:textimage_size/paths/001; type=text; label= Scss Path
+    ScssPath =  EXT:textimage_size/Resources/Public/Scss/bootstrap5/
 
+    # cat=plugin.tx_textimage_size:textimage_size/variants/010; type=integer; label= default value
+    defaultWidth = 1500
+
+    # cat=plugin.tx_textimage_size:textimage_size/variants/011; type=integer; label= xlarge value
+    xlargeWidth = 1400
+
+    # cat=plugin.tx_textimage_size:textimage_size/variants/012; type=integer; label= large value
+    largeWidth = 1100
+
+    # cat=plugin.tx_textimage_size:textimage_size/variants/013; type=integer; label= medium value
+    mediumWidth = 920
+
+    # cat=plugin.tx_textimage_size:textimage_size/variants/014; type=integer; label= small value
+    smallWidth = 680
+
+    # cat=plugin.tx_textimage_size:textimage_size/variants/015; type=integer; label= extrasmall value
+    extrasmallWidth = 500
+
+    # cat=plugin.tx_textimage_size:textimage_size/gutter/100; type=integer; label= default value
+    defaultGutterWidth = 40
+
+    # cat=plugin.tx_textimage_size:textimage_size/gutter/101; type=integer; label= xlarge value
+    xlargeGutterWidth = 40
+
+    # cat=plugin.tx_textimage_size:textimage_size/gutter/1022; label= large value
+    largeGutterWidth = 40
+
+    # cat=plugin.tx_textimage_size:textimage_size/gutter/1033; type=integer; label= medium value
+    mediumGutterWidth = 40
+
+  }
+}
