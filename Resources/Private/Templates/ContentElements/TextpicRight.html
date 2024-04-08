@@ -1,3 +1,4 @@
+
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Header" />
@@ -13,7 +14,6 @@
 
 </f:if>
 
-
 <f:if condition="{data.layout} == 0">
   <f:/then>
          <f:variable name="textimage-style"></f:variable>
@@ -24,14 +24,7 @@
 </f:if>
 
 
-<f:comment>    <f:variable name="imageConfig">{settings.responsiveimages.contentelements.textpic.right}</f:variable></f:comment>
-
 <f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
-
-    <f:variable name="textimageinputsize">{data.layout -6760}</f:variable>
-    <f:variable name="textimage-textsize">col-md-{columns -textimageinputsize}</f:variable>
-    <f:variable name="textimage-imagesize">col-md-{textimageinputsize}</f:variable>
-
     <f:switch expression="{data.layout}">
         <f:case value="6761">
             <f:variable name="imageConfig">{settings.responsiveimages.contentelements.8}</f:variable>
@@ -67,9 +60,7 @@
             <f:variable name="imageConfig">{settings.responsiveimages.contentelements.91}</f:variable>
         </f:case>
     </f:switch>
-
 </f:if>
-
 
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
     <div class="{textimage-style} textpic textpic-right">

@@ -1,3 +1,4 @@
+
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Header" />
@@ -59,6 +60,7 @@
     </f:switch>
 </f:if>
 
+<bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
 
     <div class="{textimage-style} textmedia textmedia-above">
         <div class="textmedia-item textmedia-gallery {textimage-imagesize}">

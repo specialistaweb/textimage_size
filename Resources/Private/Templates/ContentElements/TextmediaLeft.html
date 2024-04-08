@@ -1,3 +1,4 @@
+
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Header" />
@@ -31,10 +32,8 @@
 </f:if>
 
 
-<f:comment><f:variable name="imageConfig">{settings.responsiveimages.contentelements.textmedia.left}</f:variable></f:comment>
-
-  <f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
-     <f:switch expression="{data.layout}">
+<f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
+    <f:switch expression="{data.layout}">
         <f:case value="6761">
             <f:variable name="imageConfig">{settings.responsiveimages.contentelements.8}</f:variable>
         </f:case>
@@ -68,9 +67,8 @@
         <f:case value="6771">
             <f:variable name="imageConfig">{settings.responsiveimages.contentelements.91}</f:variable>
         </f:case>
-      </f:switch>
-    </f:if>
-
+    </f:switch>
+</f:if>
 
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
     <div class="textmedia textmedia-left">
