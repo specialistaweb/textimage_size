@@ -14,6 +14,14 @@
 
 </f:if>
 
+<f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
+
+    <f:variable name="textimageinputsize">{data.layout -6760}</f:variable>
+    <f:variable name="textimage-textsize">col-md-{columns -textimageinputsize}</f:variable>
+    <f:variable name="textimage-imagesize">col-md-{textimageinputsize}</f:variable>
+
+</f:if>
+
 <f:if condition="{data.layout} == 0">
   <f:/then>
          <f:variable name="textimage-style"></f:variable>
