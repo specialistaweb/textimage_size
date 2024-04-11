@@ -21,7 +21,7 @@
 }
 
 .textimage-size.textpic, .textimage-size.textmedia, .textpic, .textmedia {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
 	gap: 24px;
 }
 
