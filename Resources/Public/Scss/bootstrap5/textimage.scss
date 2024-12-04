@@ -11,6 +11,12 @@
     max-width: 100%;
 }
 
+
+.textpic.textpic-below, .textpic.textpic-above {
+  display: flex;
+  flex-direction: column;
+}
+
 .textimage-size.textmedia.textmedia-above, .textimage-size.textmedia.textmedia-below {
     display: flex;
     flex-direction: column;
