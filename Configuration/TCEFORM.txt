@@ -1,0 +1,49 @@
+###########
+# TCEFORM #
+###########
+
+
+TCEFORM.tt_content.layout.disableNoMatchingValueElement = 0
+
+TCEFORM.tt_content.layout.types.textpic {
+  addItems.6761  = image/media size 8% 
+  addItems.6762  = image/media size 16%
+  addItems.6763  = image/media size 25% 
+  addItems.6764  = image/media size 33% 
+  addItems.6765  = image/media size 41% 
+  addItems.6766  = image/media size 50% 
+  addItems.6767  = image/media size 58% 
+  addItems.6768  = image/media size 66% 
+  addItems.6769  = image/media size 75% 
+  addItems.6770  = image/media size 83% 
+  addItems.6771  = image/media size 91% 
+}
+
+TCEFORM.tt_content.layout.types.textmedia {
+  addItems.6761  = image/media size 8% 
+  addItems.6762  = image/media size 16%
+  addItems.6763  = image/media size 25% 
+  addItems.6764  = image/media size 33% 
+  addItems.6765  = image/media size 41% 
+  addItems.6766  = image/media size 50% 
+  addItems.6767  = image/media size 58% 
+  addItems.6768  = image/media size 66% 
+  addItems.6769  = image/media size 75% 
+  addItems.6770  = image/media size 83% 
+  addItems.6771  = image/media size 91% 
+}
+
+TCEFORM.tt_content.layout.types.image {
+  addItems.6761  = image/media size 8% 
+  addItems.6762  = image/media size 16%
+  addItems.6763  = image/media size 25% 
+  addItems.6764  = image/media size 33% 
+  addItems.6765  = image/media size 41% 
+  addItems.6766  = image/media size 50% 
+  addItems.6767  = image/media size 58% 
+  addItems.6768  = image/media size 66% 
+  addItems.6769  = image/media size 75% 
+  addItems.6770  = image/media size 83% 
+  addItems.6771  = image/media size 91% 
+}
+
