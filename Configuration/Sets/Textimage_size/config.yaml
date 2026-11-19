@@ -1,2 +1,5 @@
 name: Specialistaweb/textimage_size
-label: TextImage size (bootstrap 5)
+label: 'Text Media/Image size'
+# Loaded after the bootstrap_package content elements when that set is used too
+optionalDependencies:
+  - bootstrap-package/content-elements

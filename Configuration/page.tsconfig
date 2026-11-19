@@ -1,49 +1,44 @@
-###########
-# TCEFORM #
-###########
+# Text Media/Image size: entries of the "Layout" select (tt_content.layout).
+# Loaded automatically for every page (TYPO3 12+), no registration needed.
 
-
-TCEFORM.tt_content.layout.disableNoMatchingValueElement = 0
-
-TCEFORM.tt_content.layout.types.textpic {
-  addItems.6761  = image/media size 8% 
-  addItems.6762  = image/media size 16%
-  addItems.6763  = image/media size 25% 
-  addItems.6764  = image/media size 33% 
-  addItems.6765  = image/media size 41% 
-  addItems.6766  = image/media size 50% 
-  addItems.6767  = image/media size 58% 
-  addItems.6768  = image/media size 66% 
-  addItems.6769  = image/media size 75% 
-  addItems.6770  = image/media size 83% 
-  addItems.6771  = image/media size 91% 
+TCEFORM.tt_content.layout.types.textpic.addItems {
+  6761 = Image width 8% (1/12)
+  6762 = Image width 16% (2/12)
+  6763 = Image width 25% (3/12)
+  6764 = Image width 33% (4/12)
+  6765 = Image width 41% (5/12)
+  6766 = Image width 50% (6/12)
+  6767 = Image width 58% (7/12)
+  6768 = Image width 66% (8/12)
+  6769 = Image width 75% (9/12)
+  6770 = Image width 83% (10/12)
+  6771 = Image width 91% (11/12)
 }
 
-TCEFORM.tt_content.layout.types.textmedia {
-  addItems.6761  = image/media size 8% 
-  addItems.6762  = image/media size 16%
-  addItems.6763  = image/media size 25% 
-  addItems.6764  = image/media size 33% 
-  addItems.6765  = image/media size 41% 
-  addItems.6766  = image/media size 50% 
-  addItems.6767  = image/media size 58% 
-  addItems.6768  = image/media size 66% 
-  addItems.6769  = image/media size 75% 
-  addItems.6770  = image/media size 83% 
-  addItems.6771  = image/media size 91% 
+TCEFORM.tt_content.layout.types.textmedia.addItems {
+  6761 = Image width 8% (1/12)
+  6762 = Image width 16% (2/12)
+  6763 = Image width 25% (3/12)
+  6764 = Image width 33% (4/12)
+  6765 = Image width 41% (5/12)
+  6766 = Image width 50% (6/12)
+  6767 = Image width 58% (7/12)
+  6768 = Image width 66% (8/12)
+  6769 = Image width 75% (9/12)
+  6770 = Image width 83% (10/12)
+  6771 = Image width 91% (11/12)
 }
 
-TCEFORM.tt_content.layout.types.image {
-  addItems.6761  = image/media size 8% 
-  addItems.6762  = image/media size 16%
-  addItems.6763  = image/media size 25% 
-  addItems.6764  = image/media size 33% 
-  addItems.6765  = image/media size 41% 
-  addItems.6766  = image/media size 50% 
-  addItems.6767  = image/media size 58% 
-  addItems.6768  = image/media size 66% 
-  addItems.6769  = image/media size 75% 
-  addItems.6770  = image/media size 83% 
-  addItems.6771  = image/media size 91% 
+TCEFORM.tt_content.layout.types.image.addItems {
+  6761 = Image width 8% (1/12)
+  6762 = Image width 16% (2/12)
+  6763 = Image width 25% (3/12)
+  6764 = Image width 33% (4/12)
+  6765 = Image width 41% (5/12)
+  6766 = Image width 50% (6/12)
+  6767 = Image width 58% (7/12)
+  6768 = Image width 66% (8/12)
+  6769 = Image width 75% (9/12)
+  6770 = Image width 83% (10/12)
+  6771 = Image width 91% (11/12)
 }
-

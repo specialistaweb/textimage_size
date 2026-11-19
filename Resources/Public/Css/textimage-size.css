@@ -1,0 +1,58 @@
+/*
+ * Text Media/Image size
+ * Loaded only on pages with a content element that uses one of the layouts of the extension.
+ * Everything is scoped to .textimage-size: other content elements are not touched.
+ *
+ * --tis-n: twelfths of the width taken by the image (set by the class textimage-size-n).
+ * Below 768 px (Bootstrap "md") the image keeps the full width, as in bootstrap_package.
+ */
+.textimage-size-1 { --tis-n: 1; }
+.textimage-size-2 { --tis-n: 2; }
+.textimage-size-3 { --tis-n: 3; }
+.textimage-size-4 { --tis-n: 4; }
+.textimage-size-5 { --tis-n: 5; }
+.textimage-size-6 { --tis-n: 6; }
+.textimage-size-7 { --tis-n: 7; }
+.textimage-size-8 { --tis-n: 8; }
+.textimage-size-9 { --tis-n: 9; }
+.textimage-size-10 { --tis-n: 10; }
+.textimage-size-11 { --tis-n: 11; }
+
+@media (min-width: 768px) {
+    /* Image next to the text (left, right, centered): the space left by the gap is shared n : 12 - n */
+    .textimage-size.textmedia-left,
+    .textimage-size.textmedia-right,
+    .textimage-size.textpic-left,
+    .textimage-size.textpic-right {
+        flex-wrap: nowrap;
+    }
+    .textimage-size.textmedia-left > .textmedia-item,
+    .textimage-size.textmedia-right > .textmedia-item,
+    .textimage-size.textpic-left > .textpic-item,
+    .textimage-size.textpic-right > .textpic-item {
+        width: auto;
+        min-width: 0;
+    }
+    .textimage-size.textmedia-left > .textmedia-gallery,
+    .textimage-size.textmedia-right > .textmedia-gallery,
+    .textimage-size.textpic-left > .textpic-gallery,
+    .textimage-size.textpic-right > .textpic-gallery {
+        flex: var(--tis-n, 6) 1 0%;
+    }
+    .textimage-size.textmedia-left > .textmedia-text,
+    .textimage-size.textmedia-right > .textmedia-text,
+    .textimage-size.textpic-left > .textpic-text,
+    .textimage-size.textpic-right > .textpic-text {
+        flex: calc(12 - var(--tis-n, 6)) 1 0%;
+    }
+
+    /* Image above or below the text, and the Images element: n twelfths of the width, centred */
+    .textimage-size.textmedia-above > .textmedia-gallery,
+    .textimage-size.textmedia-below > .textmedia-gallery,
+    .textimage-size.textpic-above > .textpic-gallery,
+    .textimage-size.textpic-below > .textpic-gallery,
+    .textimage-size.textimage-size-image {
+        width: calc(100% * var(--tis-n, 12) / 12);
+        margin-inline: auto;
+    }
+}

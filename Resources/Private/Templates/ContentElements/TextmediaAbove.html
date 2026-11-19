@@ -1,68 +1,29 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Text Media/Image size: Textmedia "Above" with an image width of n twelfths.
+    Same markup as bootstrap_package, plus the classes textimage-size and textimage-size-n.
+</f:comment>
 <f:layout name="Default" />
 <f:section name="Header" />
 <f:section name="Main">
 
-<f:variable name="columns">12</f:variable>
-
-<f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
-    <f:variable name="textimageinputsize">{data.layout -6760}</f:variable>
-    <f:variable name="textimage-imagesize">col-md-{textimageinputsize} m-auto</f:variable>
-</f:if>
-
-<f:if condition="{data.layout} == 0">
-  <f:/then>
-         <f:variable name="textimage-style"></f:variable>
-  </f:/then>
-  <f:else>
-        <f:variable name="textimage-style">textimage-size </f:variable>
-  </f:else>
-</f:if>
-
-<f:if condition="{data.layout} > 6760 && {data.layout} < 6772">
-    <f:switch expression="{data.layout}">
-        <f:case value="6761">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.8}</f:variable>
-        </f:case>
-        <f:case value="6762">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.16}</f:variable>
-        </f:case>
-        <f:case value="6763">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.25}</f:variable>
-        </f:case>
-        <f:case value="6764">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.33}</f:variable>
-        </f:case>
-        <f:case value="6765">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.41}</f:variable>
-        </f:case>
-        <f:case value="6766">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.50}</f:variable>
-        </f:case>
-        <f:case value="6767">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.58}</f:variable>
-        </f:case>
-        <f:case value="6768">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.66}</f:variable>
-        </f:case>
-        <f:case value="6769">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.75}</f:variable>
-        </f:case>
-        <f:case value="6770">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.83}</f:variable>
-        </f:case>
-        <f:case value="6771">
-            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.91}</f:variable>
-        </f:case>
-    </f:switch>
-</f:if>
-
-<bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
-
-    <div class="{textimage-style} textmedia textmedia-above">
-        <div class="textmedia-item textmedia-gallery {textimage-imagesize}">
-            <f:render partial="Media/Gallery" arguments="{_all}" />
-        </div>
+    <f:comment>
+        Image width n (1-11 twelfths): layout 6761-6771 = n 1-11; old layouts 6661-6671 set the
+        text width, so the image takes the rest. Only reached for these layouts (setup.typoscript).
+    </f:comment>
+    <f:variable name="layout">{data.layout as integer}</f:variable>
+    <f:variable name="n" value="6" />
+    <f:if condition="{layout} > 6760 && {layout} < 6772"><f:variable name="n">{layout - 6760}</f:variable></f:if>
+    <f:if condition="{layout} > 6660 && {layout} < 6672"><f:variable name="n">{6672 - layout}</f:variable></f:if>
+    <f:variable name="imageConfig">{settings.textimagesize.full.{n}}</f:variable>
+    <f:asset.css identifier="textimage_size" href="EXT:textimage_size/Resources/Public/Css/textimage-size.css" />
+    <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
+    <div class="textmedia textmedia-above textimage-size textimage-size-{n}">
+        <f:if condition="{files}">
+            <div class="textmedia-item textmedia-gallery">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+            </div>
+        </f:if>
         <div class="textmedia-item textmedia-text">
             <f:render partial="Header/All" arguments="{_all}" />
             <f:format.html>{data.bodytext}</f:format.html>

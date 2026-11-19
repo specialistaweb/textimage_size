@@ -1,19 +1,21 @@
 {
     "name": "specialistaweb/textimage_size",
     "type": "typo3-cms-extension",
-    "description": "useful to change the output  layout for text/image (also said: textpict) content under boostrap 4 so you can get different size for text or image cols and not only the 50%-50% split",
+    "description": "Changes the split between image and text (default 50% / 50%) of the bootstrap_package content elements Text & Media, Text & Images and Images: the image can take 1 to 11 twelfths of the width.",
     "keywords": [
         "TYPO3",
         "extension",
         "content",
         "text",
-	"textpic",
-	"media",
-	"size",
-	"picture",
-	"image"
+        "textpic",
+        "textmedia",
+        "media",
+        "image",
+        "size",
+        "bootstrap_package"
     ],
     "homepage": "https://typo3.specialistaweb.it/development/textimage-size",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Alessandro Tuveri",
@@ -21,28 +23,18 @@
         },
         {
             "name": "Giulia Tuveri",
+            "email": "gt@specialistaweb.it",
             "role": "Developer"
         }
     ],
-    "license": [
-        "GPL-2.0-or-later"
-    ],
     "require": {
-        "bk2k/bootstrap-package": ">=13.4.0 <=16.0.99",
-        "typo3/cms-core": ">=12.0.0 <=14.99.99"
-    },
-    "autoload": {
-        "psr-4": {
-            "Specialistaweb\\TextimageSize\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Specialistaweb\\TextimageSize\\Tests\\": "Tests"
-        }
+        "php": "^8.1",
+        "bk2k/bootstrap-package": "^13.0 || ^14.0 || ^15.0 || ^16.0",
+        "typo3/cms-core": "^12.4 || ^13.4 || ^14.3",
+        "typo3/cms-fluid": "^12.4 || ^13.4 || ^14.3",
+        "typo3/cms-frontend": "^12.4 || ^13.4 || ^14.3"
     },
     "replace": {
-        "specialistaweb/textimage-size": "self.version",
         "typo3-ter/textimage-size": "self.version"
     },
     "extra": {

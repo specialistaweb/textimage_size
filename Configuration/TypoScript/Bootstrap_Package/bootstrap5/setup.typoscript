@@ -1,99 +1,301 @@
-// PAGE inclusion: Css bundle, Scss and JS
-page.includeCSS {
-      textimage = {$plugin.tx_textimage_size.settings.ScssPath}textimage.scss
+# Text Media/Image size
+# Requires bootstrap_package (content elements image, textpic, textmedia).
+
+# The templates of this extension are used only for content elements with one of its layouts
+# (tt_content.layout 6761-6771, and the old 6661-6671). Every other content element keeps the
+# templates of the installed bootstrap_package version (and of the site package).
+tt_content.image.templateRootPaths {
+  6760 = EXT:textimage_size/Resources/Private/Templates/ContentElements/
+  6760.stdWrap.if {
+    value = 6761,6762,6763,6764,6765,6766,6767,6768,6769,6770,6771,6661,6662,6663,6664,6665,6666,6667,6668,6669,6670,6671
+    isInList.field = layout
+  }
+}
+tt_content.textpic.templateRootPaths {
+  6760 = EXT:textimage_size/Resources/Private/Templates/ContentElements/
+  6760.stdWrap.if {
+    value = 6761,6762,6763,6764,6765,6766,6767,6768,6769,6770,6771,6661,6662,6663,6664,6665,6666,6667,6668,6669,6670,6671
+    isInList.field = layout
+  }
+}
+tt_content.textmedia.templateRootPaths {
+  6760 = EXT:textimage_size/Resources/Private/Templates/ContentElements/
+  6760.stdWrap.if {
+    value = 6761,6762,6763,6764,6765,6766,6767,6768,6769,6770,6771,6661,6662,6663,6664,6665,6666,6667,6668,6669,6670,6671
+    isInList.field = layout
+  }
 }
 
-lib.contentElement.settings.responsiveimages.variants.default.width =	{$plugin.tx_textimage_size.settings.defaultWidth}
-lib.contentElement.settings.responsiveimages.variants.xlarge.width =	{$plugin.tx_textimage_size.settings.exlargeWidth}
-lib.contentElement.settings.responsiveimages.variants.large.width =	{$plugin.tx_textimage_size.settings.largeWidth}
-lib.contentElement.settings.responsiveimages.variants.medium.width =	{$plugin.tx_textimage_size.settings.mediumWidth}
-lib.contentElement.settings.responsiveimages.variants.small.width =	{$plugin.tx_textimage_size.settings.smallWidth}
-lib.contentElement.settings.responsiveimages.variants.extrasmall.width ={$plugin.tx_textimage_size.settings.extrasmallWidth}
-
-
-lib.contentElement.settings.responsiveimages.contentelements.8 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.8.multiplier {
-  default = 0.08
-  xlarge = 0.08
-  large = 0.08
-  medium = 0.08
-}
-lib.contentElement.settings.responsiveimages.contentelements.16 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.16.multiplier {
-  default = 0.16
-  xlarge = 0.16
-  large = 0.16
-  medium = 0.16
-}
-lib.contentElement.settings.responsiveimages.contentelements.25 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.25.multiplier {
-  default = 0.25
-  xlarge = 0.25
-  large = 0.25
-  medium = 0.25
-}
-lib.contentElement.settings.responsiveimages.contentelements.33 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.33.multiplier {
-  default = 0.33
-  xlarge = 0.33
-  large = 0.33
-  medium = 0.3333
-}
-lib.contentElement.settings.responsiveimages.contentelements.41 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.41.multiplier {
-  default = 0.41
-  xlarge = 0.41
-  large = 0.41
-  medium = 0.41
-}
-lib.contentElement.settings.responsiveimages.contentelements.50 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.50.multiplier {
-  default = 0.5
-  xlarge = 0.5
-  large = 0.5
-  medium = 0.5
-}
-lib.contentElement.settings.responsiveimages.contentelements.58 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.58.multiplier {
-  default = 0.58
-  xlarge = 0.58
-  large = 0.58
-  medium = 0.58
-}
-lib.contentElement.settings.responsiveimages.contentelements.66 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.66.multiplier {
-  default = 0.66
-  xlarge = 0.66
-  large = 0.66
-  medium = 0.66
-}
-lib.contentElement.settings.responsiveimages.contentelements.75 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.75.multiplier {
-  default = 0.75
-  xlarge = 0.75
-  large = 0.75
-  medium = 0.75
-}
-lib.contentElement.settings.responsiveimages.contentelements.83 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.83.multiplier {
-  default = 0.83
-  xlarge = 0.83
-  large = 0.83
-  medium = 0.83
-}
-lib.contentElement.settings.responsiveimages.contentelements.91 < lib.contentElement.settings.responsiveimages.contentelements.textmedia.default
-lib.contentElement.settings.responsiveimages.contentelements.91.multiplier {
-  default = 0.91
-  xlarge = 0.91
-  large = 0.91
-  medium = 0.91
-}
-
-
-// gutters
-lib.contentElement.settings.responsiveimages.variants.default.gutters {
-	default = {$plugin.tx_textimage_size.settings.defaultGutterWidth}
-	xlarge =  {$plugin.tx_textimage_size.settings.xlargeGutterWidth}
-	large =   {$plugin.tx_textimage_size.settings.largeGutterWidth}
-	medium =  {$plugin.tx_textimage_size.settings.mediumGutterWidth}
+# Responsive image sizes for the selected width (n = 1...11 twelfths of the width).
+#   side.n: image next to the text (left/right/centered); full.n: image above/below the text or alone.
+# Small screens (below 768 px) show the image at full width, as bootstrap_package does.
+lib.contentElement.settings.textimagesize {
+  side {
+    1 {
+      multiplier {
+        default = 0.0833
+        xlarge = 0.0833
+        large = 0.0833
+        medium = 0.0833
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    2 {
+      multiplier {
+        default = 0.1667
+        xlarge = 0.1667
+        large = 0.1667
+        medium = 0.1667
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    3 {
+      multiplier {
+        default = 0.25
+        xlarge = 0.25
+        large = 0.25
+        medium = 0.25
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    4 {
+      multiplier {
+        default = 0.3333
+        xlarge = 0.3333
+        large = 0.3333
+        medium = 0.3333
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    5 {
+      multiplier {
+        default = 0.4167
+        xlarge = 0.4167
+        large = 0.4167
+        medium = 0.4167
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    6 {
+      multiplier {
+        default = 0.5
+        xlarge = 0.5
+        large = 0.5
+        medium = 0.5
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    7 {
+      multiplier {
+        default = 0.5833
+        xlarge = 0.5833
+        large = 0.5833
+        medium = 0.5833
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    8 {
+      multiplier {
+        default = 0.6667
+        xlarge = 0.6667
+        large = 0.6667
+        medium = 0.6667
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    9 {
+      multiplier {
+        default = 0.75
+        xlarge = 0.75
+        large = 0.75
+        medium = 0.75
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    10 {
+      multiplier {
+        default = 0.8333
+        xlarge = 0.8333
+        large = 0.8333
+        medium = 0.8333
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    11 {
+      multiplier {
+        default = 0.9167
+        xlarge = 0.9167
+        large = 0.9167
+        medium = 0.9167
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+    12 {
+      multiplier {
+        default = 1.0
+        xlarge = 1.0
+        large = 1.0
+        medium = 1.0
+      }
+      gutters {
+        default = 40
+        xlarge = 40
+        large = 40
+        medium = 40
+      }
+    }
+  }
+  full {
+    1 {
+      multiplier {
+        default = 0.0833
+        xlarge = 0.0833
+        large = 0.0833
+        medium = 0.0833
+      }
+    }
+    2 {
+      multiplier {
+        default = 0.1667
+        xlarge = 0.1667
+        large = 0.1667
+        medium = 0.1667
+      }
+    }
+    3 {
+      multiplier {
+        default = 0.25
+        xlarge = 0.25
+        large = 0.25
+        medium = 0.25
+      }
+    }
+    4 {
+      multiplier {
+        default = 0.3333
+        xlarge = 0.3333
+        large = 0.3333
+        medium = 0.3333
+      }
+    }
+    5 {
+      multiplier {
+        default = 0.4167
+        xlarge = 0.4167
+        large = 0.4167
+        medium = 0.4167
+      }
+    }
+    6 {
+      multiplier {
+        default = 0.5
+        xlarge = 0.5
+        large = 0.5
+        medium = 0.5
+      }
+    }
+    7 {
+      multiplier {
+        default = 0.5833
+        xlarge = 0.5833
+        large = 0.5833
+        medium = 0.5833
+      }
+    }
+    8 {
+      multiplier {
+        default = 0.6667
+        xlarge = 0.6667
+        large = 0.6667
+        medium = 0.6667
+      }
+    }
+    9 {
+      multiplier {
+        default = 0.75
+        xlarge = 0.75
+        large = 0.75
+        medium = 0.75
+      }
+    }
+    10 {
+      multiplier {
+        default = 0.8333
+        xlarge = 0.8333
+        large = 0.8333
+        medium = 0.8333
+      }
+    }
+    11 {
+      multiplier {
+        default = 0.9167
+        xlarge = 0.9167
+        large = 0.9167
+        medium = 0.9167
+      }
+    }
+    12 {
+      multiplier {
+        default = 1.0
+        xlarge = 1.0
+        large = 1.0
+        medium = 1.0
+      }
+    }
+  }
 }

@@ -1,39 +1,21 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "textimage_size".
- *
- * Auto generated 25-10-2023 09:19
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
-$EM_CONF[$_EXTKEY] = array (
-  'title' => 'Text Media/Image size',
-  'description' => 'Use only with bootstrap 5 + boostrap package 12 to change the output size for standard bootstrap package output (column split 50% image - 50% text). For content types text/image (textpict), text/media and image',
-  'category' => 'plugin',
-  'version' => '4.3.0',
-  'state' => 'stable',
-  'uploadfolder' => false,
-  'clearcacheonload' => true,
-  'author' => 'Giulia Tuveri',
-  'author_email' => 'gt@pecialistaweb.it',
-  'author_company' => NULL,
-  'constraints' => 
-  array (
-    'depends' => 
-    array (
-      'typo3' => '12.0.0-14.4.99',
-      'bootstrap_package' => '13.0.0-16.0.99',
-    ),
-    'conflicts' => 
-    array (
-    ),
-    'suggests' => 
-    array (
-    ),
-  ),
-);
-
+$EM_CONF[$_EXTKEY] = [
+    'title' => 'Text Media/Image size',
+    'description' => 'Changes the split between image and text (default 50% / 50%) of the bootstrap_package content elements Text & Media, Text & Images and Images: the image can take 1 to 11 twelfths of the width.',
+    'category' => 'fe',
+    'version' => '5.0.0',
+    'state' => 'stable',
+    'author' => 'Giulia Tuveri',
+    'author_email' => 'gt@specialistaweb.it',
+    'author_company' => 'Specialistaweb',
+    'constraints' => [
+        'depends' => [
+            'php' => '8.1.0-8.5.99',
+            'typo3' => '12.4.0-14.4.99',
+            'bootstrap_package' => '13.0.0-16.99.99',
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+];
